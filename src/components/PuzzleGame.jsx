@@ -100,147 +100,124 @@ function PuzzleGame({ puzzleId, onBack }) {
     },
     triceratops: {
       name: '트리케라톱스',
-      image: '/images/2.png',
+      image: null,
       imageOffset: { x: 0, y: 0, width: 1.0, height: 1.0 },
+      iconSize: { width: 400, height: 400 },
+      iconCenter: {
+        x: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2,
+        y: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2,
+      },
       parts: [
         {
-          id: 'head',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.2,
-          bgY: 0,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.2,
-          correctY: PUZZLE_BOARD_TOP,
+          id: 'body',
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 112,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 128 + 64,
           initialX: 50,
           initialY: 50,
-          width: PUZZLE_BOARD_WIDTH * 0.6,
-          height: PUZZLE_BOARD_HEIGHT * 0.4,
+          width: 224,
+          height: 256,
         },
         {
-          id: 'body',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.15,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.4,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.15,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.4,
-          initialX: 50,
-          initialY: 200,
-          width: PUZZLE_BOARD_WIDTH * 0.7,
-          height: PUZZLE_BOARD_HEIGHT * 0.4,
+          id: 'face',
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 96,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 128 - 32 - 80,
+          initialX: 200,
+          initialY: 50,
+          width: 192,
+          height: 160,
         },
         {
           id: 'leg1',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.1,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.8,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.1,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.8,
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 112 + 48,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 128 + 256,
           initialX: 350,
           initialY: 350,
-          width: PUZZLE_BOARD_WIDTH * 0.3,
-          height: PUZZLE_BOARD_HEIGHT * 0.2,
+          width: 80,
+          height: 128,
         },
         {
           id: 'leg2',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.6,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.8,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.6,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.8,
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 112 + 192,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 128 + 256,
           initialX: 500,
           initialY: 350,
-          width: PUZZLE_BOARD_WIDTH * 0.3,
-          height: PUZZLE_BOARD_HEIGHT * 0.2,
+          width: 80,
+          height: 128,
         },
         {
           id: 'tail',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.75,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.55,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.75,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.55,
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 112 + 112,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 128 + 256 - 32,
           initialX: 550,
-          initialY: 50,
-          width: PUZZLE_BOARD_WIDTH * 0.25,
-          height: PUZZLE_BOARD_HEIGHT * 0.25,
-        },
-        {
-          id: 'horn',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.3,
-          bgY: 0,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.3,
-          correctY: PUZZLE_BOARD_TOP,
-          initialX: 200,
-          initialY: 150,
-          width: PUZZLE_BOARD_WIDTH * 0.4,
-          height: PUZZLE_BOARD_HEIGHT * 0.15,
+          initialY: 200,
+          width: 128,
+          height: 64,
         },
       ],
     },
     brachiosaurus: {
       name: '브라키오사우루스',
-      image: '/images/3.png',
+      image: null,
       imageOffset: { x: 0, y: 0, width: 1.0, height: 1.0 },
+      iconSize: { width: 400, height: 640 },
+      iconCenter: {
+        x: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2,
+        y: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2,
+      },
       parts: [
         {
-          id: 'head',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.3,
-          bgY: 0,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.3,
-          correctY: PUZZLE_BOARD_TOP,
+          id: 'body',
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 96,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 160 + 128,
           initialX: 50,
           initialY: 50,
-          width: PUZZLE_BOARD_WIDTH * 0.4,
-          height: PUZZLE_BOARD_HEIGHT * 0.2,
+          width: 192,
+          height: 256,
         },
         {
           id: 'neck',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.35,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.2,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.35,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.2,
-          initialX: 50,
-          initialY: 150,
-          width: PUZZLE_BOARD_WIDTH * 0.3,
-          height: PUZZLE_BOARD_HEIGHT * 0.3,
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 64,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 160 - 128,
+          initialX: 200,
+          initialY: 50,
+          width: 128,
+          height: 256,
         },
         {
-          id: 'body',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.1,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.5,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.1,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.5,
-          initialX: 50,
-          initialY: 300,
-          width: PUZZLE_BOARD_WIDTH * 0.8,
-          height: PUZZLE_BOARD_HEIGHT * 0.3,
+          id: 'face',
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 80,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 160 - 256 - 64,
+          initialX: 350,
+          initialY: 50,
+          width: 160,
+          height: 128,
         },
         {
           id: 'leg1',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.05,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.8,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.05,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.8,
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 96 + 16,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 160 + 256,
           initialX: 250,
           initialY: 350,
-          width: PUZZLE_BOARD_WIDTH * 0.3,
-          height: PUZZLE_BOARD_HEIGHT * 0.2,
+          width: 64,
+          height: 160,
         },
         {
           id: 'leg2',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.65,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.8,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.65,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.8,
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 96 + 192 - 80,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 160 + 256,
           initialX: 500,
           initialY: 350,
-          width: PUZZLE_BOARD_WIDTH * 0.3,
-          height: PUZZLE_BOARD_HEIGHT * 0.2,
+          width: 64,
+          height: 160,
         },
         {
           id: 'tail',
-          bgX: -PUZZLE_BOARD_WIDTH * 0.7,
-          bgY: -PUZZLE_BOARD_HEIGHT * 0.65,
-          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH * 0.7,
-          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT * 0.65,
+          correctX: PUZZLE_BOARD_LEFT + PUZZLE_BOARD_WIDTH / 2 - 96 + 96,
+          correctY: PUZZLE_BOARD_TOP + PUZZLE_BOARD_HEIGHT / 2 - 160 + 256 - 32,
           initialX: 550,
-          initialY: 50,
-          width: PUZZLE_BOARD_WIDTH * 0.3,
-          height: PUZZLE_BOARD_HEIGHT * 0.15,
+          initialY: 200,
+          width: 96,
+          height: 48,
         },
       ],
     },
@@ -309,7 +286,7 @@ function PuzzleGame({ puzzleId, onBack }) {
 
   useEffect(() => {
     if (puzzleId && dinosaurPuzzles[puzzleId]) {
-      if (puzzleId === 'tyrannosaurus') {
+      if (puzzleId === 'tyrannosaurus' || puzzleId === 'triceratops' || puzzleId === 'brachiosaurus') {
         setImageBounds({ offsetX: 0, offsetY: 0, scaleX: 1, scaleY: 1 })
         return
       }
@@ -374,7 +351,7 @@ function PuzzleGame({ puzzleId, onBack }) {
   useEffect(() => {
     if (puzzleId && dinosaurPuzzles[puzzleId]) {
       const puzzle = dinosaurPuzzles[puzzleId]
-      if (puzzleId === 'tyrannosaurus') {
+      if (puzzleId === 'tyrannosaurus' || puzzleId === 'triceratops' || puzzleId === 'brachiosaurus') {
         const initialPieces = puzzle.parts.map((part) => ({
           ...part,
           x: part.correctX,
@@ -402,7 +379,7 @@ function PuzzleGame({ puzzleId, onBack }) {
   }, [puzzleId])
 
   const handleStartPuzzle = () => {
-    if (puzzleId === 'tyrannosaurus' && !isStarted) {
+    if ((puzzleId === 'tyrannosaurus' || puzzleId === 'triceratops' || puzzleId === 'brachiosaurus') && !isStarted) {
       setIsStarted(true)
       setPieces((prevPieces) =>
         prevPieces.map((piece) => ({
@@ -463,7 +440,7 @@ function PuzzleGame({ puzzleId, onBack }) {
 
       <div className="w-full h-full flex items-center justify-center">
         <div className="relative" style={{ width: '800px', height: '600px' }}>
-          {puzzleId === 'tyrannosaurus' && isStarted && (
+          {((puzzleId === 'tyrannosaurus' || puzzleId === 'triceratops' || puzzleId === 'brachiosaurus') && isStarted) && (
             <div
               className="absolute opacity-20"
               style={{
@@ -487,10 +464,16 @@ function PuzzleGame({ puzzleId, onBack }) {
                   }}
                 >
                   <div className="w-full h-full relative">
-                    {part.id === 'body' && (
+                    {part.id === 'body' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-400 rounded-full"></div>
                     )}
-                    {part.id === 'face' && (
+                    {part.id === 'body' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-400 rounded-full"></div>
+                    )}
+                    {part.id === 'body' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-400 rounded-full"></div>
+                    )}
+                    {part.id === 'face' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full relative">
                         <div className="w-full h-full bg-red-500 rounded-full relative">
                           <div className="absolute top-8 left-8 w-8 h-8 bg-white rounded-full">
@@ -506,20 +489,72 @@ function PuzzleGame({ puzzleId, onBack }) {
                         </div>
                       </div>
                     )}
+                    {part.id === 'face' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full relative">
+                        <div className="w-full h-full bg-yellow-500 rounded-full relative">
+                          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                            <div className="w-6 h-24 bg-yellow-600 rounded-full transform rotate-12"></div>
+                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-24 bg-yellow-600 rounded-full"></div>
+                            <div className="absolute top-0 right-0 w-6 h-24 bg-yellow-600 rounded-full transform -rotate-12"></div>
+                          </div>
+                          <div className="absolute top-12 left-12 w-8 h-8 bg-white rounded-full">
+                            <div className="absolute top-1 left-1 w-4 h-4 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute top-12 right-12 w-8 h-8 bg-white rounded-full">
+                            <div className="absolute top-1 left-1 w-4 h-4 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-yellow-600 rounded-b-full"></div>
+                        </div>
+                      </div>
+                    )}
+                    {part.id === 'face' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full relative">
+                        <div className="w-full h-full bg-green-500 rounded-full relative">
+                          <div className="absolute top-8 left-8 w-6 h-6 bg-white rounded-full">
+                            <div className="absolute top-0.5 left-0.5 w-3 h-3 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute top-8 right-8 w-6 h-6 bg-white rounded-full">
+                            <div className="absolute top-0.5 left-0.5 w-3 h-3 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-green-600 rounded-b-full"></div>
+                        </div>
+                      </div>
+                    )}
                     {part.id === 'arm1' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform rotate-45"></div>
                     )}
                     {part.id === 'arm2' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform -rotate-45"></div>
                     )}
-                    {part.id === 'leg1' && (
+                    {part.id === 'leg1' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full"></div>
                     )}
-                    {part.id === 'leg2' && (
+                    {part.id === 'leg1' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full"></div>
+                    )}
+                    {part.id === 'leg1' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
+                    )}
+                    {part.id === 'leg2' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full"></div>
                     )}
-                    {part.id === 'tail' && (
+                    {part.id === 'leg2' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full"></div>
+                    )}
+                    {part.id === 'leg2' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
+                    )}
+                    {part.id === 'tail' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {part.id === 'tail' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {part.id === 'tail' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {part.id === 'neck' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
                     )}
                   </div>
                 </div>
@@ -527,7 +562,7 @@ function PuzzleGame({ puzzleId, onBack }) {
             </div>
           )}
 
-          {puzzleId === 'tyrannosaurus' && !isStarted && (
+          {((puzzleId === 'tyrannosaurus' || puzzleId === 'triceratops' || puzzleId === 'brachiosaurus') && !isStarted) && (
             <>
               {pieces.map((piece) => (
                 <motion.div
@@ -557,10 +592,16 @@ function PuzzleGame({ puzzleId, onBack }) {
                   }}
                 >
                   <div className="w-full h-full relative">
-                    {piece.id === 'body' && (
+                    {piece.id === 'body' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-400 rounded-full"></div>
                     )}
-                    {piece.id === 'face' && (
+                    {piece.id === 'body' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-400 rounded-full"></div>
+                    )}
+                    {piece.id === 'body' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-400 rounded-full"></div>
+                    )}
+                    {piece.id === 'face' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full relative">
                         <div className="w-full h-full bg-red-500 rounded-full relative">
                           <div className="absolute top-8 left-8 w-8 h-8 bg-white rounded-full">
@@ -576,20 +617,72 @@ function PuzzleGame({ puzzleId, onBack }) {
                         </div>
                       </div>
                     )}
+                    {piece.id === 'face' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full relative">
+                        <div className="w-full h-full bg-yellow-500 rounded-full relative">
+                          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                            <div className="w-6 h-24 bg-yellow-600 rounded-full transform rotate-12"></div>
+                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-24 bg-yellow-600 rounded-full"></div>
+                            <div className="absolute top-0 right-0 w-6 h-24 bg-yellow-600 rounded-full transform -rotate-12"></div>
+                          </div>
+                          <div className="absolute top-12 left-12 w-8 h-8 bg-white rounded-full">
+                            <div className="absolute top-1 left-1 w-4 h-4 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute top-12 right-12 w-8 h-8 bg-white rounded-full">
+                            <div className="absolute top-1 left-1 w-4 h-4 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-yellow-600 rounded-b-full"></div>
+                        </div>
+                      </div>
+                    )}
+                    {piece.id === 'face' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full relative">
+                        <div className="w-full h-full bg-green-500 rounded-full relative">
+                          <div className="absolute top-8 left-8 w-6 h-6 bg-white rounded-full">
+                            <div className="absolute top-0.5 left-0.5 w-3 h-3 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute top-8 right-8 w-6 h-6 bg-white rounded-full">
+                            <div className="absolute top-0.5 left-0.5 w-3 h-3 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-green-600 rounded-b-full"></div>
+                        </div>
+                      </div>
+                    )}
                     {piece.id === 'arm1' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform rotate-45"></div>
                     )}
                     {piece.id === 'arm2' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform -rotate-45"></div>
                     )}
-                    {piece.id === 'leg1' && (
+                    {piece.id === 'leg1' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full"></div>
                     )}
-                    {piece.id === 'leg2' && (
+                    {piece.id === 'leg1' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'leg1' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'leg2' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full"></div>
                     )}
-                    {piece.id === 'tail' && (
+                    {piece.id === 'leg2' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'leg2' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'tail' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {piece.id === 'tail' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {piece.id === 'tail' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {piece.id === 'neck' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
                     )}
                   </div>
                 </motion.div>
@@ -614,7 +707,7 @@ function PuzzleGame({ puzzleId, onBack }) {
             </>
           )}
           
-          {puzzleId !== 'tyrannosaurus' && (
+          {puzzleId !== 'tyrannosaurus' && puzzleId !== 'triceratops' && puzzleId !== 'brachiosaurus' && (
             <div
               className="absolute opacity-30"
               style={{
@@ -641,7 +734,7 @@ function PuzzleGame({ puzzleId, onBack }) {
           )}
 
           {isStarted && pieces.map((piece) => {
-            if (puzzleId === 'tyrannosaurus') {
+            if (puzzleId === 'tyrannosaurus' || puzzleId === 'triceratops' || puzzleId === 'brachiosaurus') {
               let animateProps = {}
               let transitionProps = { type: 'spring', stiffness: 300, damping: 30 }
               
@@ -664,6 +757,9 @@ function PuzzleGame({ puzzleId, onBack }) {
                 } else if (piece.id === 'face') {
                   animateProps = { rotate: [0, 5, 0, -5, 0], scale: [1, 1.05, 1, 1.05, 1] }
                   transitionProps = { duration: 3, repeat: 0, ease: "easeInOut" }
+                } else if (piece.id === 'neck' && puzzleId === 'brachiosaurus') {
+                  animateProps = { rotate: [0, 5, 0, -5, 0] }
+                  transitionProps = { duration: 3, repeat: 0, ease: "easeInOut" }
                 }
               } else {
                 animateProps = {
@@ -684,7 +780,8 @@ function PuzzleGame({ puzzleId, onBack }) {
                     height: `${piece.height}px`,
                     transformOrigin: piece.id === 'arm1' || piece.id === 'arm2' ? 'top center' :
                                    piece.id === 'leg1' || piece.id === 'leg2' ? 'top center' :
-                                   piece.id === 'tail' ? 'left center' : 'center center',
+                                   piece.id === 'tail' ? 'left center' :
+                                   piece.id === 'neck' ? 'bottom center' : 'center center',
                   }}
                   drag={!piece.isPlaced && !isAnimating}
                   dragMomentum={false}
@@ -757,10 +854,16 @@ function PuzzleGame({ puzzleId, onBack }) {
                       cursor: piece.isPlaced ? 'default' : 'grab',
                     }}
                   >
-                    {piece.id === 'body' && (
+                    {piece.id === 'body' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-400 rounded-full"></div>
                     )}
-                    {piece.id === 'face' && (
+                    {piece.id === 'body' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-400 rounded-full"></div>
+                    )}
+                    {piece.id === 'body' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-400 rounded-full"></div>
+                    )}
+                    {piece.id === 'face' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full relative">
                         <div className="w-full h-full bg-red-500 rounded-full relative">
                           <div className="absolute top-8 left-8 w-8 h-8 bg-white rounded-full">
@@ -776,20 +879,72 @@ function PuzzleGame({ puzzleId, onBack }) {
                         </div>
                       </div>
                     )}
+                    {piece.id === 'face' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full relative">
+                        <div className="w-full h-full bg-yellow-500 rounded-full relative">
+                          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                            <div className="w-6 h-24 bg-yellow-600 rounded-full transform rotate-12"></div>
+                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-24 bg-yellow-600 rounded-full"></div>
+                            <div className="absolute top-0 right-0 w-6 h-24 bg-yellow-600 rounded-full transform -rotate-12"></div>
+                          </div>
+                          <div className="absolute top-12 left-12 w-8 h-8 bg-white rounded-full">
+                            <div className="absolute top-1 left-1 w-4 h-4 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute top-12 right-12 w-8 h-8 bg-white rounded-full">
+                            <div className="absolute top-1 left-1 w-4 h-4 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-yellow-600 rounded-b-full"></div>
+                        </div>
+                      </div>
+                    )}
+                    {piece.id === 'face' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full relative">
+                        <div className="w-full h-full bg-green-500 rounded-full relative">
+                          <div className="absolute top-8 left-8 w-6 h-6 bg-white rounded-full">
+                            <div className="absolute top-0.5 left-0.5 w-3 h-3 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute top-8 right-8 w-6 h-6 bg-white rounded-full">
+                            <div className="absolute top-0.5 left-0.5 w-3 h-3 bg-black rounded-full"></div>
+                          </div>
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-green-600 rounded-b-full"></div>
+                        </div>
+                      </div>
+                    )}
                     {piece.id === 'arm1' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform rotate-45"></div>
                     )}
                     {piece.id === 'arm2' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform -rotate-45"></div>
                     )}
-                    {piece.id === 'leg1' && (
+                    {piece.id === 'leg1' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full"></div>
                     )}
-                    {piece.id === 'leg2' && (
+                    {piece.id === 'leg1' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'leg1' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'leg2' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full"></div>
                     )}
-                    {piece.id === 'tail' && (
+                    {piece.id === 'leg2' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'leg2' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
+                    )}
+                    {piece.id === 'tail' && puzzleId === 'tyrannosaurus' && (
                       <div className="w-full h-full bg-red-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {piece.id === 'tail' && puzzleId === 'triceratops' && (
+                      <div className="w-full h-full bg-yellow-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {piece.id === 'tail' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full transform rotate-12"></div>
+                    )}
+                    {piece.id === 'neck' && puzzleId === 'brachiosaurus' && (
+                      <div className="w-full h-full bg-green-500 rounded-full"></div>
                     )}
                   </div>
                 </motion.div>
